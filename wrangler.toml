@@ -1,0 +1,31 @@
+name = "moontv"
+compatibility_date = "2025-06-28"
+
+# 指定 Pages 产物目录，供 `wrangler pages dev` 本地预览使用
+pages_build_output_dir = ".vercel/output/static"
+
+# 开启 Node.js API 兼容层（next-on-pages 已自动注入所需 polyfill）
+compatibility_flags = ["nodejs_compat"] 
+
+[vars]
+# 管理员账号
+USERNAME = "admin"
+
+NEXT_PUBLIC_FLUID_SEARCH = "true"
+# 存储配置
+NEXT_PUBLIC_STORAGE_TYPE= "d1"
+# 功能开关
+NEXT_PUBLIC_ENABLE_REGISTER= "true"
+
+NEXT_PUBLIC_SEARCH_MAX_PAGE= "5"
+NEXT_PUBLIC_AGGREGATE_SEARCH_RESULT= "true"
+# 关闭色情内容过滤 true/false
+NEXT_PUBLIC_DISABLE_YELLOW_FILTER = "false"
+
+NEXT_PUBLIC_DOUBAN_PROXY_TYPE = "cmliussss-cdn-tencent"
+NEXT_PUBLIC_DOUBAN_IMAGE_PROXY_TYPE = "img3"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "no8on"
+database_id = "08b8a724-6a36-4d64-9ea8-3c1e9f460a88"
